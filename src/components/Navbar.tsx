@@ -17,39 +17,70 @@ const Navbar = () => {
           <span className="text-secondary">188</span>
         </a>
 
-        {/* Desktop */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {["Games", "Promo", "Bantuan", "Tentang"].map((item) => (
             <a key={item} href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors font-medium tracking-wider uppercase">
               {item}
             </a>
           ))}
-          <button className="px-5 py-2 rounded-lg bg-primary text-primary-foreground font-display text-xs font-bold tracking-wider glow-cyan">
-            LOGIN
-          </button>
+          
+          <div className="flex items-center gap-4">
+            <a 
+              href="https://gem188-hape.com/account/register" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm text-primary font-bold hover:underline tracking-wider uppercase"
+            >
+              DAFTAR
+            </a>
+            <a 
+              href="https://gem188-hape.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-5 py-2 rounded-lg bg-primary text-primary-foreground font-display text-xs font-bold tracking-wider glow-cyan hover:opacity-90 transition-opacity"
+            >
+              LOGIN
+            </a>
+          </div>
         </div>
 
-        {/* Mobile toggle */}
+        {/* Mobile Toggle */}
         <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
           <Menu className="w-6 h-6" />
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {open && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
-          className="md:hidden glass-card border-t border-border/50 px-6 py-4 flex flex-col gap-3"
+          className="md:hidden glass-card border-t border-border/50 px-6 py-4 flex flex-col gap-4"
         >
           {["Games", "Promo", "Bantuan", "Tentang"].map((item) => (
-            <a key={item} href="#" className="text-sm text-muted-foreground py-2 font-medium tracking-wider uppercase">
+            <a key={item} href="#" className="text-sm text-muted-foreground py-1 font-medium tracking-wider uppercase">
               {item}
             </a>
           ))}
-          <button className="px-5 py-2 rounded-lg bg-primary text-primary-foreground font-display text-xs font-bold tracking-wider mt-2">
-            LOGIN
-          </button>
+          <div className="flex flex-col gap-3 mt-2">
+            <a 
+              href="https://gem188-hape.com/account/register" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full text-center py-2 text-primary font-bold border border-primary rounded-lg"
+            >
+              DAFTAR
+            </a>
+            <a 
+              href="https://gem188-hape.com"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full text-center py-2 rounded-lg bg-primary text-primary-foreground font-display font-bold"
+            >
+              LOGIN
+            </a>
+          </div>
         </motion.div>
       )}
     </motion.nav>
