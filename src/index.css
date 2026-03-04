@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 200 20% 92%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 200 20% 92%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 200 20% 92%;
+
+    --primary: 220 10% 75%;
+    --primary-foreground: 220 20% 6%;
+
+    --secondary: 42 90% 55%;
+    --secondary-foreground: 220 20% 6%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 220 10% 75%;
+    --accent-foreground: 220 20% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 175 85% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 18% 8%;
+    --sidebar-foreground: 200 20% 92%;
+    --sidebar-primary: 175 85% 50%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 200 20% 92%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 175 85% 50%;
+
+    /* Custom gaming tokens */
+    --glow-cyan: 220 10% 75%;
+    --glow-gold: 42 90% 55%;
+    --surface-glass: 220 18% 12%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px hsl(220 10% 75% / 0.3), 0 0 60px hsl(220 10% 75% / 0.1);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px hsl(42 90% 55% / 0.3), 0 0 60px hsl(42 90% 55% / 0.1);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 20px hsl(220 10% 75% / 0.4), 0 0 40px hsl(220 10% 75% / 0.15);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 20px hsl(42 90% 55% / 0.5), 0 0 40px hsl(42 90% 55% / 0.2);
+  }
+
+  .glass-card {
+    background: hsl(220 18% 12% / 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(220 15% 18% / 0.8);
+  }
+
+  .gradient-border {
+    border-image: linear-gradient(135deg, hsl(175 85% 50%), hsl(42 90% 55%)) 1;
+  }
+}
