@@ -35,21 +35,28 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 rounded-lg bg-primary text-primary-foreground font-display font-bold text-lg glow-cyan tracking-wider"
-            >
-              MAIN SEKARANG
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 rounded-lg border border-secondary text-secondary font-display font-bold text-lg tracking-wider hover:bg-secondary/10 transition-colors"
-            >
-              DAFTAR GRATIS
-            </motion.button>
-          </div>
+  <motion.a
+    href="https://gem188-hape.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.98 }}
+    className="px-8 py-4 rounded-lg bg-primary text-primary-foreground font-display font-bold text-lg glow-cyan tracking-wider text-center"
+  >
+    MAIN SEKARANG
+  </motion.a>
+  
+  <motion.a
+    href="https://gem188-hape.com/account/register"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.98 }}
+    className="px-8 py-4 rounded-lg border border-secondary text-secondary font-display font-bold text-lg tracking-wider hover:bg-secondary/10 transition-colors text-center"
+  >
+    DAFTAR Sekarang
+  </motion.a>
+</div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto">
